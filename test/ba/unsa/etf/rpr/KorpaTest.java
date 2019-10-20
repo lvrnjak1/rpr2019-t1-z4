@@ -31,7 +31,7 @@ class KorpaTest {
     @Test
     void dodavanjeTest3() {
         for(int i = 0; i < 50; i++){
-            Artikl artikl = new Artikl("laptop", 2500, "1234");
+            Artikl artikl = new Artikl("laptop", 2500, String.valueOf(i));
             korpa.dodajArtikl(artikl);
         }
         boolean mozeSeDodati = korpa.dodajArtikl(new Artikl("telefon", 1000, "5678"));
