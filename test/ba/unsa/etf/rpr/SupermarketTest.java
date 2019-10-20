@@ -3,8 +3,7 @@ package ba.unsa.etf.rpr;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 class SupermarketTest {
 
@@ -30,5 +29,18 @@ class SupermarketTest {
         }
 
         assertFalse(supermarket.dodajArtikl(artikl));
+    }
+
+    @Test
+    void izbacivanjeTest1() {
+        supermarket.dodajArtikl(artikl);
+        supermarket.izbaciArtiklSaKodom("lap123");
+        assertEquals(0, supermarket.getBrojArtikala());
+    }
+
+    @Test
+    void izbacivanjeTest2() {
+        Artikl izbacen = supermarket.izbaciArtiklSaKodom("nepostojeciKod");
+        assertNull(izbacen);
     }
 }
