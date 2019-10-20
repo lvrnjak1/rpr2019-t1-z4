@@ -13,8 +13,8 @@ public class Supermarket {
         for(int i = 0; i < brojArtikala; i++){
             if(artikli[i].getKod().equals(kod)){
                 Artikl izbacen = artikli[i];
-                for(int j = i; j < brojArtikala - 1; j++){
-                    artikli[j] = artikli[j-1];
+                for(int j = i; j < 999; j++){
+                    artikli[j] = artikli[j+1];
                 }
                 brojArtikala--;
                 return izbacen;
