@@ -28,4 +28,8 @@ public class Supermarket {
         artikli[brojArtikala] = a;
         brojArtikala++;
     }
+
+    public int getBrojArtikala() {
+        return brojArtikala;
+    }
 }
