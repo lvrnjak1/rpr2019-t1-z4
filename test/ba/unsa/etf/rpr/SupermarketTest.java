@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class SupermarketTest {
 
@@ -22,5 +23,12 @@ class SupermarketTest {
         assertEquals(1, supermarket.getBrojArtikala());
     }
 
+    @Test
+    void dodavanjeTest2() {
+        for(int i = 0; i < 1000; i++){
+            supermarket.dodajArtikl(new Artikl("proizvod", 500, String.valueOf(i)));
+        }
 
+        assertFalse(supermarket.dodajArtikl(artikl));
+    }
 }
