@@ -41,4 +41,8 @@ public class Korpa {
 
         return ukupnaCijena;
     }
+
+    public int getBrojArtikala() {
+        return brojArtikala;
+    }
 }
